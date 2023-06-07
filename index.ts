@@ -8,13 +8,14 @@ import questionRouter from "./src/apis/question/questionRouter";
 
 const app:Application = express();
 const port = 3000;
+
 const AppDataSource = new DataSource({
     type: "postgres",
-    port:5432,
-    username: "VDS",
+    port:  5432,
+    username: "postgres",
     password:"Hasanvemustafa.",
     host: "77.92.151.188",
-    database:"deneme",
+    database:"personeltakip",
     synchronize: true,
     entities: [Day,Question, Personnel]
 });

@@ -12,8 +12,6 @@ export class Personnel extends BaseEntity {
     surname: string
     @Column()
     targetPuan:number
-    
-
     @OneToMany(() => Personnel, (personnel) => personnel.day)
     day: Day[]
 }
